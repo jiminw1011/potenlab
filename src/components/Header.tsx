@@ -62,10 +62,10 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="tel:02-1234-5678"
+            href="tel:15443344"
             className="ml-6 text-accent text-[13px] tracking-wider border border-accent/30 px-6 py-2 hover:bg-accent hover:text-primary transition-all duration-300"
           >
-            02-1234-5678
+            15443344
           </a>
         </nav>
 
@@ -116,10 +116,10 @@ export default function Header() {
           ))}
           <div className="mt-4 pt-8 border-t border-white/10">
             <a
-              href="tel:02-1234-5678"
+              href="tel:15443344"
               className="text-accent text-sm tracking-widest"
             >
-              02-1234-5678
+              15443344
             </a>
           </div>
         </div>

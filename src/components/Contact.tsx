@@ -33,7 +33,7 @@ export default function Contact() {
             {/* Quick contact cards */}
             <div className="mt-12 space-y-4">
               {[
-                { label: "전화 상담", value: "02-1234-5678" },
+                { label: "전화 상담", value: "15443344" },
                 { label: "카카오톡", value: "ID: justice-law" },
                 { label: "방문 상담", value: "사전 예약 필수" },
               ].map((item) => (

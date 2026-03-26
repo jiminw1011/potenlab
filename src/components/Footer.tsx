@@ -53,7 +53,7 @@ export default function Footer() {
             <ul className="space-y-3 text-[13px] font-light">
               <li>서울특별시 서초구 서초대로 250</li>
               <li>법조빌딩 12층</li>
-              <li className="pt-2">대표전화 02-1234-5678</li>
+              <li className="pt-2">대표전화 15443344</li>
               <li>팩스 02-1234-5679</li>
               <li className="pt-2">contact@justice-law.co.kr</li>
             </ul>
