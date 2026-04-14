@@ -8,20 +8,33 @@
   --color-accent: #b8964e;
   --color-accent-light: #cba95f;
   --color-accent-dark: #9a7b3c;
+  --color-purple: #6C3AED;
+  --color-purple-light: #8B5CF6;
+  --color-purple-dark: #5028C6;
+  --color-purple-50: #F5F3FF;
+  --color-purple-100: #EDE9FE;
+  --color-edu-navy: #0F203C;
+  --color-edu-navy-light: #162d52;
+  --color-edu-navy-dark: #0a1628;
+  --color-edu-orange: #FF7B00;
+  --color-edu-orange-light: #FF9B40;
+  --color-edu-teal: #00BFA5;
+  --color-edu-teal-light: #33CFBA;
+  --color-edu-sky: #38bdf8;
   --color-cream: #f5f0e8;
   --color-cream-dark: #ebe4d6;
   --color-charcoal: #2a2a3a;
   --color-slate: #8890a0;
   --color-gray-50: #fafafa;
-  --color-gray-100: #f0f0f2;
-  --color-gray-200: #e4e4e8;
-  --color-gray-300: #c8c8d0;
-  --color-gray-400: #8e8e9a;
-  --color-gray-500: #6b6b78;
-  --color-gray-600: #4b4b58;
-  --color-gray-700: #36364a;
-  --color-gray-800: #1f1f30;
-  --color-gray-900: #111122;
+  --color-gray-100: #f5f5f5;
+  --color-gray-200: #e5e5e5;
+  --color-gray-300: #d4d4d4;
+  --color-gray-400: #a3a3a3;
+  --color-gray-500: #737373;
+  --color-gray-600: #525252;
+  --color-gray-700: #404040;
+  --color-gray-800: #262626;
+  --color-gray-900: #171717;
   --font-sans: var(--font-noto-sans-kr);
   --font-serif: var(--font-cormorant);
 }
@@ -103,6 +116,39 @@ body {
   text-transform: uppercase;
   color: var(--color-accent);
 }
+
+/* EduEducator bar animation */
+.bar-fill {
+  width: 0;
+  transition: width 1.2s ease-out;
+}
+.bar-fill.visible {
+  width: var(--bar-width);
+}
+
+/* EduEducator stat scale-in */
+.stat-pop {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.6s ease-out, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.stat-pop.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* EduEducator tab panel */
+.edu-panel-enter {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.float-anim { animation: float 3s ease-in-out infinite; }
 
 .section-label::before {
   content: "";
