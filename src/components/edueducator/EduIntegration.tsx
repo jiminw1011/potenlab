@@ -1,8 +1,11 @@
-const stakeholders = [
-  { title: "Teachers", desc: "Assignments auto-sync. Grades flow back automatically. Zero double-entry.", icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" },
-  { title: "Students", desc: "Submit from Google Classroom and receive feedback in the same familiar interface.", icon: "M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" },
-  { title: "Admins", desc: "School- and district-level dashboards built on existing Google data.", icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" },
-  { title: "IT Teams", desc: "Google OAuth — no new logins or complex provisioning required.", icon: "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" },
+import { User, Users, Building2, Settings } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+
+const stakeholders: { title: string; desc: string; Icon: LucideIcon }[] = [
+  { title: "Teachers", desc: "Assignments auto-sync. Grades flow back automatically. Zero double-entry.", Icon: User },
+  { title: "Students", desc: "Submit from Google Classroom and receive feedback in the same familiar interface.", Icon: Users },
+  { title: "Admins", desc: "School- and district-level dashboards built on existing Google data.", Icon: Building2 },
+  { title: "IT Teams", desc: "Google OAuth — no new logins or complex provisioning required.", Icon: Settings },
 ];
 
 export default function EduIntegration() {
@@ -35,9 +38,7 @@ export default function EduIntegration() {
               {stakeholders.map((s) => (
                 <div key={s.title} className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-edu-teal rounded-full flex items-center justify-center shrink-0">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={s.icon} />
-                    </svg>
+                    <s.Icon className="w-5 h-5 text-white" />
                   </div>
                   <div>
                     <h4 className="font-bold text-edu-navy mb-1">{s.title}</h4>
