@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="ko"
+      lang="en"
       className={`${notoSansKr.variable} ${cormorant.variable} antialiased`}
     >
       <body className="min-h-screen flex flex-col font-sans">{children}</body>
