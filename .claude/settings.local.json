@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(npx:*)",
-      "Bash(npm -v)"
+      "Bash(npm -v)",
+      "mcp__Claude_Preview__preview_start"
     ]
   }
 }
